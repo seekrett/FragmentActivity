@@ -32,7 +32,7 @@ class ColorFragment : Fragment() {
                 onItemSelectedListener = object: OnItemSelectedListener {
                     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, Id: Long) {
                         parent?.run {
-                            view?.setBackgroundColor(Color.parseColor(getItemAtPosition(position).toString()))
+                            this@ColorFragment.view?.setBackgroundColor(Color.parseColor(getItemAtPosition(position).toString()))
                         }
                     }
 
